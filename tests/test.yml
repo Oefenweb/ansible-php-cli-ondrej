@@ -1,0 +1,7 @@
+# test file for php-cli-ondrej
+---
+- hosts: localhost
+  connection: local
+  sudo: true
+  roles:
+    - ../../

@@ -1,0 +1,7 @@
+# tasks file for php-cli-ondrej
+---
+- include: repository.yml
+- include: install.yml
+- include: configuration.yml
+- include: mods-install.yml
+- include: mods-state.yml

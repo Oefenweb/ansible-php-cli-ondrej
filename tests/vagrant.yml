@@ -1,0 +1,7 @@
+# test file for php-cli-ondrej
+---
+- hosts: all
+  remote_user: vagrant
+  sudo: true
+  roles:
+    - ../../
