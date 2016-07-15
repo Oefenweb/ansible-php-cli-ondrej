@@ -6,9 +6,6 @@
     state: latest
   with_items: "{{ php_cli_ondrej_dependencies }}"
   tags:
-    - configuration
-    - php-cli-ondrej
-    - php-cli-ondrej-install
     - php-cli-ondrej-install-dependencies
 
 - name: install | additional
@@ -17,7 +14,4 @@
     state: latest
   with_items: "{{ php_cli_ondrej_install }}"
   tags:
-    - configuration
-    - php-cli-ondrej
-    - php-cli-ondrej-install
     - php-cli-ondrej-install-additional

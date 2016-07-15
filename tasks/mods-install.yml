@@ -1,12 +1,9 @@
 # tasks file for php-cli-ondrej
 ---
-- name: mods | install
+- name: mods install | install
   apt:
     name: "{{ item.value.dependencies | default(php_cli_ondrej_mods_dependencies[item.key]) | default([]) }}"
     state: latest
   with_dict: "{{ php_cli_ondrej_mods_present }}"
   tags:
-    - configuration
-    - php-cli-ondrej
-    - php-cli-ondrej-mods
-    - php-cli-ondrej-mods-install
+    - php-cli-ondrej-mods-install-install

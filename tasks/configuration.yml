@@ -6,9 +6,6 @@
     path: "/usr/bin/php{{ php_cli_ondrej_version }}"
   when: php_cli_ondrej_update_alternatives
   tags:
-    - configuration
-    - php-cli-ondrej
-    - php-cli-ondrej-configuration
     - php-cli-ondrej-configuration-update-alternatives
 
 - name: configuration | update php.ini
@@ -19,7 +16,4 @@
     group: root
     mode: 0644
   tags:
-    - configuration
-    - php-cli-ondrej
-    - php-cli-ondrej-configuration
     - php-cli-ondrej-configuration-general
