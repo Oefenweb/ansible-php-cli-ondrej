@@ -27,6 +27,8 @@ php_cli_ondrej_mods_dependencies:
     - php-memcached
   memcache:
     - php-memcache
+  msgpack:
+    - php-msgpack
   mbstring:
     - "php{{ php_cli_ondrej_version }}-mbstring"
   mcrypt:

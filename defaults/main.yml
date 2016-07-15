@@ -20,6 +20,7 @@ php_cli_ondrej_mods_present:
   mysql: {}
   memcache: {}
   memcached: {}
+  msgpack: {}
   mbstring: {}
   mcrypt: {}
   gd: {}

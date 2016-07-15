@@ -25,7 +25,7 @@ None
 * `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem (since 5.6)
 * `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem (since 5.6)
 
-* `php_cli_ondrej_mods_present`: [default: `{json: {}, xml: {}, readline: {}, mysql: {}, memcache: {}, memcached: {}, mstring: {}, mcrypt: {}, gd: {}, curl: {}}`]: Modules to enable
+* `php_cli_ondrej_mods_present`: [default: `{json: {}, xml: {}, readline: {}, mysql: {}, memcache: {}, memcached: {}, msgpack: {}, mstring: {}, mcrypt: {}, gd: {}, curl: {}}`]: Modules to enable
 * `php_cli_ondrej_mods_present.key`: [required]: The identifier of the module (e.g. `curl`)
 * `php_cli_ondrej_mods_present.key.dependencies`: [optional: default: `[]`]: Packages needed by the module (e.g. `php5.6-curl`)
 
