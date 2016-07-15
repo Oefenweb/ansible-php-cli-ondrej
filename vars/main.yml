@@ -1,0 +1,51 @@
+# vars file for php-cli-ondrej
+---
+php_cli_ondrej_versions_supported:
+  - '5.5'
+  - '5.6'
+  - '7.0'
+
+php_cli_ondrej_dependencies:
+  - "php{{ php_cli_ondrej_version }}-cli"
+
+php_cli_ondrej_configuration_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/php.ini"
+php_cli_ondrej_mods_available_path: "/etc/php/{{ php_cli_ondrej_version }}/mods-available"
+php_cli_ondrej_conf_d_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/conf.d"
+
+
+# Some of the dependencies below (e.g. `php-memcached`) do not have a version specific version,
+# see: https://github.com/oerdnj/deb.sury.org/issues/363
+
+php_cli_ondrej_mods_dependencies:
+  json:
+    - "php{{ php_cli_ondrej_version }}-json"
+  xml:
+    - "php{{ php_cli_ondrej_version }}-xml"
+  mysql:
+    - "php{{ php_cli_ondrej_version }}-mysql"
+  memcached:
+    - php-memcached
+  memcache:
+    - php-memcache
+  msgpack:
+    - php-msgpack
+  mbstring:
+    - "php{{ php_cli_ondrej_version }}-mbstring"
+  mcrypt:
+    - "php{{ php_cli_ondrej_version }}-mcrypt"
+  gd:
+    - "php{{ php_cli_ondrej_version }}-gd"
+  curl:
+    - "php{{ php_cli_ondrej_version }}-curl"
+  redis:
+    - php-redis
+  xdebug:
+    - php-xdebug
+  intl:
+    - "php{{ php_cli_ondrej_version }}-intl"
+  readline:
+    - "php{{ php_cli_ondrej_version }}-readline"
+  soap:
+    - "php{{ php_cli_ondrej_version }}-soap"
+  snmp:
+    - "php{{ php_cli_ondrej_version }}-snmp"

@@ -1,0 +1,37 @@
+# tasks file for php-cli-ondrej
+---
+- include: version-support.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-version-support
+
+- include: repository.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-repository
+
+- include: install.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-install
+
+- include: configuration.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-configuration
+
+- include: mods-install.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-mods-install
+
+- include: mods-state.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-mods-state

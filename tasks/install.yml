@@ -1,0 +1,17 @@
+# tasks file for php-cli-ondrej
+---
+- name: install | dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ php_cli_ondrej_dependencies }}"
+  tags:
+    - php-cli-ondrej-install-dependencies
+
+- name: install | additional
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ php_cli_ondrej_install }}"
+  tags:
+    - php-cli-ondrej-install-additional

@@ -1,0 +1,18 @@
+# meta file for php-cli-ondrej
+---
+galaxy_info:
+  author: Mischa ter Smitten
+  company: Oefenweb.nl B.V.
+  description: Set up PHP 5.6 Cli in Ubuntu systems (using Ondřej Surý's ppa)
+  license: MIT
+  min_ansible_version: 1.7
+  platforms:
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
+        - xenial
+  galaxy_tags:
+    - system
+    - web
+dependencies: []

@@ -1,0 +1,30 @@
+# defaults file for php-cli-ondrej
+---
+php_cli_ondrej_version: 5.6
+
+php_cli_ondrej_install: []
+
+php_cli_ondrej_update_alternatives: true
+
+php_cli_ondrej_precision: 14
+php_cli_ondrej_serialize_precision: 17
+php_cli_ondrej_disable_functions: []
+php_cli_ondrej_max_execution_time: 0
+php_cli_ondrej_memory_limit: -1
+php_cli_ondrej_error_reporting: 'E_ALL & ~E_DEPRECATED & ~E_STRICT'
+
+php_cli_ondrej_mods_present:
+  json: {}
+  xml: {}
+  readline: {}
+  mysql: {}
+  memcache: {}
+  memcached: {}
+  msgpack: {}
+  mbstring: {}
+  mcrypt: {}
+  gd: {}
+  curl: {}
+
+php_cli_ondrej_mods_absent:
+  opcache: {}

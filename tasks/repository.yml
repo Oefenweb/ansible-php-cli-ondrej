@@ -1,0 +1,8 @@
+# tasks file for php-cli-ondrej
+---
+- name: repository | add
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+    update_cache: true
+  tags:
+    - php-cli-ondrej-repository-add

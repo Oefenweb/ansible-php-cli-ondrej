@@ -1,0 +1,19 @@
+# tasks file for php-cli-ondrej
+---
+- name: configuration | update alternatives
+  alternatives:
+    name: php
+    path: "/usr/bin/php{{ php_cli_ondrej_version }}"
+  when: php_cli_ondrej_update_alternatives
+  tags:
+    - php-cli-ondrej-configuration-update-alternatives
+
+- name: configuration | update php.ini
+  template:
+    src: "{{ php_cli_ondrej_configuration_file.lstrip('/') }}.j2"
+    dest: "{{ php_cli_ondrej_configuration_file }}"
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - php-cli-ondrej-configuration-general

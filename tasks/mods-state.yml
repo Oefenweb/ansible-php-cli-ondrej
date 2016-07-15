@@ -1,0 +1,42 @@
+# tasks file for php-cli-ondrej
+---
+- name: mods state | touch priorities
+  copy:
+    content: ''
+    dest: "{{ php_cli_ondrej_mods_available_path }}/{{ item.0 }}.ini"
+    force: false
+  with_flattened:
+    - "{{ php_cli_ondrej_mods_present | dictsort }}"
+    - "{{ php_cli_ondrej_mods_absent | dictsort }}"
+  tags:
+    - php-cli-ondrej-mods-state-priorities
+    - php-cli-ondrej-mods-state-priorities-touch
+
+- name: mods state | get priorities
+  command: sed -ne "s/^;[ ]\?priority=\([0-9]\+\)$/\\1/p" {{ php_cli_ondrej_mods_available_path }}/{{ item.0 }}.ini
+  register: php_cli_ondrej_module_priorities
+  changed_when: false
+  with_flattened:
+    - "{{ php_cli_ondrej_mods_present | dictsort }}"
+    - "{{ php_cli_ondrej_mods_absent | dictsort }}"
+  tags:
+    - php-cli-ondrej-mods-state-priorities
+    - php-cli-ondrej-mods-state-priorities-get
+
+- name: mods state | disable
+  command: phpdismod -v {{ php_cli_ondrej_version }} -s cli {{ item.item.0 }}
+  args:
+    removes: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item.0 }}.ini"
+  with_items: "{{ php_cli_ondrej_module_priorities.results }}"
+  when: item.item.0 in php_cli_ondrej_mods_absent.keys()
+  tags:
+    - php-cli-ondrej-mods-state-disable
+
+- name: mods state | enable
+  command: phpenmod -v {{ php_cli_ondrej_version }} -s cli {{ item.item.0 }}
+  args:
+    creates: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item.0 }}.ini"
+  with_items: "{{ php_cli_ondrej_module_priorities.results }}"
+  when: item.item.0 in php_cli_ondrej_mods_present.keys()
+  tags:
+    - php-cli-ondrej-mods-state-enable

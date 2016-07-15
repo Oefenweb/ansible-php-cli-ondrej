@@ -1,0 +1,8 @@
+# tasks file for php-cli-ondrej
+---
+- name: version support | check
+  fail:
+    msg: "PHP version {{ php_cli_ondrej_version }} is not supported"
+  when: php_cli_ondrej_version | string not in php_cli_ondrej_versions_supported
+  tags:
+    - php-cli-ondrej-version-support-check
