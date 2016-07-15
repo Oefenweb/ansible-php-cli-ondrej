@@ -1,5 +1,7 @@
 # defaults file for php-cli-ondrej
 ---
+php_cli_ondrej_version: 5.6
+
 php_cli_ondrej_install: []
 
 php_cli_ondrej_update_alternatives: true

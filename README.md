@@ -20,8 +20,8 @@ None
 * `php_cli_ondrej_max_execution_time`: [default: `0`]: Maximum execution time of each script, in seconds
 * `php_cli_ondrej_memory_limit`: [default: `-1`]: Maximum amount of memory a script may consume
 * `php_cli_ondrej_error_reporting`: [default: `E_ALL & ~E_DEPRECATED & ~E_STRICT`]: This directive informs PHP of which errors, warnings and notices you would like it to take action for
-* `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem
-* `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem
+* `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem (since 5.6)
+* `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem (since 5.6)
 
 * `php_cli_ondrej_mods_present`: [default: `{json: {}, xml: {}, readline: {}, mysql: {}, memcache: {}, memcached: {}, mstring: {}, mcrypt: {}, gd: {}, curl: {}}`]: Modules to enable
 * `php_cli_ondrej_mods_present.key`: [required]: The identifier of the module (e.g. `curl`)
@@ -30,17 +30,33 @@ None
 * `php_cli_ondrej_mods_absent`: [default: `{opcache: {}}`]: Modules to disable
 * `php_cli_ondrej_mods_absent.key`: [required]: The identifier of the module (e.g. `opcache`)
 
-## Dependencies
+#### Dependencies
 
 None
 
-#### Example
+#### Example(s)
+
+##### Simple
 
 ```yaml
 ---
 - hosts: all
   roles:
     - php-cli-ondrej
+```
+
+##### Multiple versions
+
+```yaml
+---
+- hosts: all
+  roles:
+    - role: php-cli-ondrej
+      php_cli_ondrej_version: 7.0
+      php_cli_ondrej_update_alternatives: false
+
+    - role: php-cli-ondrej
+      php_cli_ondrej_version: 5.6
 ```
 
 #### License

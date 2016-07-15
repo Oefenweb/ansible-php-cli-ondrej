@@ -4,4 +4,9 @@
   connection: local
   sudo: true
   roles:
-    - ../../
+    - role: ../../
+      php_cli_ondrej_version: 7.0
+      php_cli_ondrej_update_alternatives: false
+
+    - role: ../../
+      php_cli_ondrej_version: 5.6
