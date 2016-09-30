@@ -2,8 +2,8 @@
 ---
 - name: mods install | install
   apt:
-    name: "{{ item.value.dependencies | default(php_cli_ondrej_mods_dependencies[item.key]) | default([]) }}"
+    name: "{{ item.dependencies | default(php_cli_ondrej_mods_dependencies[item.name]) | default([]) }}"
     state: latest
-  with_dict: "{{ php_cli_ondrej_mods_present }}"
+  with_items: "{{ php_cli_ondrej_mods_present }}"
   tags:
     - php-cli-ondrej-mods-install-install
