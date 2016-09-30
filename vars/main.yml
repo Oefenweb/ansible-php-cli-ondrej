@@ -12,7 +12,6 @@ php_cli_ondrej_configuration_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/ph
 php_cli_ondrej_mods_available_path: "/etc/php/{{ php_cli_ondrej_version }}/mods-available"
 php_cli_ondrej_conf_d_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/conf.d"
 
-
 # Some of the dependencies below (e.g. `php-memcached`) do not have a version specific version,
 # see: https://github.com/oerdnj/deb.sury.org/issues/363
 
@@ -49,3 +48,6 @@ php_cli_ondrej_mods_dependencies:
     - "php{{ php_cli_ondrej_version }}-soap"
   snmp:
     - "php{{ php_cli_ondrej_version }}-snmp"
+
+php_cli_ondrej_mods_present_names: "{{ php_cli_ondrej_mods_present | map(attribute='name') | list }}"
+php_cli_ondrej_mods_absent_names: "{{ php_cli_ondrej_mods_absent | map(attribute='name') | list }}"
