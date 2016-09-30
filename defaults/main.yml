@@ -14,17 +14,17 @@ php_cli_ondrej_memory_limit: -1
 php_cli_ondrej_error_reporting: 'E_ALL & ~E_DEPRECATED & ~E_STRICT'
 
 php_cli_ondrej_mods_present:
-  json: {}
-  xml: {}
-  readline: {}
-  mysql: {}
-  memcache: {}
-  memcached: {}
-  msgpack: {}
-  mbstring: {}
-  mcrypt: {}
-  gd: {}
-  curl: {}
+  - name: json
+  - name: xml
+  - name: readline
+  - name: mysql
+  - name: memcache
+  - name: memcached
+  - name: msgpack
+  - name: mbstring
+  - name: mcrypt
+  - name: gd
+  - name: curl
 
 php_cli_ondrej_mods_absent:
-  opcache: {}
+  - name: opcache
