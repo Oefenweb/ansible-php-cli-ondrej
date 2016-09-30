@@ -57,7 +57,7 @@ script:
 
   # Test php installation
   - >
-    php -v
+    /usr/bin/php -v
     | grep -q 'sury'
     && (echo 'Availability test: pass' && exit 0)
     || (echo 'Availability test: fail' && exit 1)
