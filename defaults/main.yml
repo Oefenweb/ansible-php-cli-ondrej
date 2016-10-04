@@ -25,6 +25,8 @@ php_cli_ondrej_mods_present:
   - name: mcrypt
   - name: gd
   - name: curl
+php_cli_ondrej_mods_present_names: "{{ php_cli_ondrej_mods_present | map(attribute='name') | list }}"
 
 php_cli_ondrej_mods_absent:
   - name: opcache
+php_cli_ondrej_mods_absent_names: "{{ php_cli_ondrej_mods_absent | map(attribute='name') | list }}"

@@ -48,6 +48,3 @@ php_cli_ondrej_mods_dependencies:
     - "php{{ php_cli_ondrej_version }}-soap"
   snmp:
     - "php{{ php_cli_ondrej_version }}-snmp"
-
-php_cli_ondrej_mods_present_names: "{{ php_cli_ondrej_mods_present | map(attribute='name') | list }}"
-php_cli_ondrej_mods_absent_names: "{{ php_cli_ondrej_mods_absent | map(attribute='name') | list }}"
