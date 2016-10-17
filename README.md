@@ -25,9 +25,10 @@ None
 * `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem (since `5.6`)
 * `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem (since `5.6`)
 
-* `php_cli_ondrej_mods_present`: [default: `[{name: json}, {name: xml}, {name: readline}, {name: mysql}, {name: memcache}, {name: memcached}, {name: msgpack}, {name: mstring}, {name: mcrypt}, {name: gd}, {name: curl}]`]: Modules to enable
+* `php_cli_ondrej_mods_present`: [default: `[{name: json}, {name: xml}, {name: readline}, {name: mysql}, {name: memcache}, {name: memcached}, {name: msgpack}, {name: mstring}, {name: mcrypt}, {name: gd}, {name: curl}]`]: Modules to install (and enable)
 * `php_cli_ondrej_mods_present.{n}.name`: [required]: The identifier of the module (e.g. `curl`)
 * `php_cli_ondrej_mods_present.{n}.dependencies`: [optional: default: `[]`]: Packages needed by the module (e.g. `php5.6-curl`)
+* `php_cli_ondrej_mods_present.{n}.state`: [optional, default `enabled`]: Modules to disable (e.g. `{name: xdebug, state: disabled}`)
 
 * `php_cli_ondrej_mods_absent`: [default: `[{name: opcache}]`]: Modules to disable
 * `php_cli_ondrej_mods_absent.{n}.name`: [required]: The identifier of the module (e.g. `opcache`)
