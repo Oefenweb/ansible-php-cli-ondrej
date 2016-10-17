@@ -20,19 +20,19 @@
     - php-cli-ondrej-mods-state-priorities-get
 
 - name: mods state | disable
-  command: phpdismod -v {{ php_cli_ondrej_version }} -s cli {{ item.item.0 }}
+  command: phpdismod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
   args:
-    removes: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item.0 }}.ini"
+    removes: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item }}.ini"
   with_items: "{{ php_cli_ondrej_module_priorities.results }}"
-  when: item.item.0 in php_cli_ondrej_mods_absent_names
+  when: item.item in (php_cli_ondrej_mods_absent_names | union(php_cli_ondrej_mods_present_disabled_names))
   tags:
     - php-cli-ondrej-mods-state-disable
 
 - name: mods state | enable
-  command: phpenmod -v {{ php_cli_ondrej_version }} -s cli {{ item.item.0 }}
+  command: phpenmod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
   args:
-    creates: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item.0 }}.ini"
+    creates: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item }}.ini"
   with_items: "{{ php_cli_ondrej_module_priorities.results }}"
-  when: item.item.0 in php_cli_ondrej_mods_present_names
+  when: item.item in (php_cli_ondrej_mods_present_names | difference(php_cli_ondrej_mods_present_disabled_names))
   tags:
     - php-cli-ondrej-mods-state-enable

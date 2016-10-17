@@ -26,6 +26,7 @@ php_cli_ondrej_mods_present:
   - name: gd
   - name: curl
 php_cli_ondrej_mods_present_names: "{{ php_cli_ondrej_mods_present | map(attribute='name') | list }}"
+php_cli_ondrej_mods_present_disabled_names: "{{ php_cli_ondrej_mods_present | selectattr('state', 'defined') | selectattr('state', 'equalto', 'disabled') | map(attribute='name') | list }}"
 
 php_cli_ondrej_mods_absent:
   - name: opcache
