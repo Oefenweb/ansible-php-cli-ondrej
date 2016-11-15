@@ -48,3 +48,5 @@ php_cli_ondrej_mods_dependencies:
     - "php{{ php_cli_ondrej_version }}-soap"
   snmp:
     - "php{{ php_cli_ondrej_version }}-snmp"
+  opcache:
+    - "php{{ php_cli_ondrej_version }}-opcache"
