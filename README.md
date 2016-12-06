@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `php_cli_ondrej_version`: [default: `5.6`]: Version to install (e.g. `7.0`)
+* `php_cli_ondrej_version`: [default: `5.6`]: Version to install (e.g. `7.0`, `7.1`)
 
 * `php_cli_ondrej_install`: [default: `[]`]: (Additional) Packages to install
 
