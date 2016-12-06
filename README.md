@@ -17,7 +17,7 @@ None
 * `php_cli_ondrej_update_alternatives`: [default: `true`]: Whether or not to run `update-alternatives`
 
 * `php_cli_ondrej_precision`: [default: `14`]: The number of significant digits displayed in floating point numbers
-* `php_cli_ondrej_serialize_precision`: [default: `17`]: When floats & doubles are serialized store serialize_precision significant digits after the floating point
+* `php_cli_ondrej_serialize_precision`: [default: `17`, `-1` since `7.1`]: When floats & doubles are serialized store serialize_precision significant digits after the floating point
 * `php_cli_ondrej_disable_functions`: [default: `[]`]: This directive allows you to disable certain functions for security reasons
 * `php_cli_ondrej_max_execution_time`: [default: `0`]: Maximum execution time of each script, in seconds
 * `php_cli_ondrej_memory_limit`: [default: `-1`]: Maximum amount of memory a script may consume
