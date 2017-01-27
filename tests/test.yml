@@ -2,7 +2,7 @@
 ---
 - hosts: localhost
   connection: local
-  sudo: true
+  become: true
   roles:
     - role: ../../
       php_cli_ondrej_version: 7.0
