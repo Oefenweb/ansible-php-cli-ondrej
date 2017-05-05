@@ -55,4 +55,4 @@ php_cli_ondrej_mods_dependencies:
   sqlite3:
     - "php{{ php_cli_ondrej_version }}-sqlite3"
   libsodium:
-    - "php{{ php_cli_ondrej_version }}-libsodium"
+    - php-libsodium
