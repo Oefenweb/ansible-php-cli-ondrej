@@ -54,5 +54,8 @@ php_cli_ondrej_mods_dependencies:
     - php-ast
   sqlite3:
     - "php{{ php_cli_ondrej_version }}-sqlite3"
+  # TODO: This is only for backwards compatibility, remove some day
   libsodium:
     - php-libsodium
+  sodium:
+    - php-sodium
