@@ -27,4 +27,18 @@
         - name: curl
 
     - role: ../../
+      php_cli_ondrej_version: 7.3
+      php_cli_ondrej_update_alternatives: false
+      php_cli_ondrej_mods_present:
+        - name: json
+        - name: xml
+        - name: readline
+        - name: mysql
+        - name: memcached
+        - name: msgpack
+        - name: mbstring
+        - name: gd
+        - name: curl
+
+    - role: ../../
       php_cli_ondrej_version: 7.1

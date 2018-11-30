@@ -5,6 +5,7 @@ php_cli_ondrej_versions_supported:
   - '7.0'
   - '7.1'
   - '7.2'
+  - '7.3'
 
 php_cli_ondrej_dependencies:
   - "php{{ php_cli_ondrej_version }}-cli"

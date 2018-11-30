@@ -1,13 +1,13 @@
 # defaults file for php-cli-ondrej
 ---
-php_cli_ondrej_version: 5.6
+php_cli_ondrej_version: 7.1
 
 php_cli_ondrej_install: []
 
 php_cli_ondrej_update_alternatives: true
 
 php_cli_ondrej_precision: 14
-php_cli_ondrej_serialize_precision: "{{ -1 if (php_cli_ondrej_version | version_compare('7.1', '>=')) else 17 }}"
+php_cli_ondrej_serialize_precision: "{{ -1 if (php_cli_ondrej_version is version('7.1', '>=')) else 17 }}"
 php_cli_ondrej_disable_functions: []
 php_cli_ondrej_max_execution_time: 0
 php_cli_ondrej_memory_limit: -1

@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `php_cli_ondrej_version`: [default: `5.6`]: Version to install (e.g. `7.0`, `7.1`, `7.2`)
+* `php_cli_ondrej_version`: [default: `7.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`)
 
 * `php_cli_ondrej_install`: [default: `[]`]: (Additional) Packages to install
 
@@ -27,7 +27,7 @@ None
 
 * `php_cli_ondrej_mods_present`: [default: `[{name: json}, {name: xml}, {name: readline}, {name: mysql}, {name: memcache}, {name: memcached}, {name: msgpack}, {name: mstring}, {name: mcrypt}, {name: gd}, {name: curl}]`]: Modules to install (and enable)
 * `php_cli_ondrej_mods_present.{n}.name`: [required]: The identifier of the module (e.g. `curl`)
-* `php_cli_ondrej_mods_present.{n}.dependencies`: [optional: default: `[]`]: Packages needed by the module (e.g. `php5.6-curl`)
+* `php_cli_ondrej_mods_present.{n}.dependencies`: [optional: default: `[]`]: Packages needed by the module (e.g. `php7.1-curl`)
 * `php_cli_ondrej_mods_present.{n}.state`: [optional, default `enabled`]: Modules to disable (e.g. `{name: xdebug, state: disabled}`)
 
 * `php_cli_ondrej_mods_absent`: [default: `[{name: opcache}]`]: Modules to disable

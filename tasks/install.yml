@@ -2,16 +2,14 @@
 ---
 - name: install | dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ php_cli_ondrej_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ php_cli_ondrej_dependencies }}"
   tags:
     - php-cli-ondrej-install-dependencies
 
 - name: install | additional
   apt:
-    name: "{{ item }}"
+    name: "{{ php_cli_ondrej_install }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ php_cli_ondrej_install }}"
   tags:
     - php-cli-ondrej-install-additional

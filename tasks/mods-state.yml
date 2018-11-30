@@ -11,7 +11,10 @@
     - php-cli-ondrej-mods-state-priorities-touch
 
 - name: mods state | get priorities
-  command: sed -ne "s/^;[ ]\?priority=\([0-9]\+\)$/\\1/p" {{ php_cli_ondrej_mods_available_path }}/{{ item }}.ini
+  command: >
+    sed -ne "s/^;[ ]\?priority=\([0-9]\+\)$/\\1/p" {{ php_cli_ondrej_mods_available_path }}/{{ item }}.ini
+  args:
+    warn: false
   register: php_cli_ondrej_module_priorities
   changed_when: false
   with_items: "{{ php_cli_ondrej_mods_present_names + php_cli_ondrej_mods_absent_names }}"
@@ -20,7 +23,8 @@
     - php-cli-ondrej-mods-state-priorities-get
 
 - name: mods state | disable
-  command: phpdismod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
+  command: >
+    phpdismod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
   args:
     removes: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item }}.ini"
   with_items: "{{ php_cli_ondrej_module_priorities.results }}"
@@ -29,7 +33,8 @@
     - php-cli-ondrej-mods-state-disable
 
 - name: mods state | enable
-  command: phpenmod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
+  command: >
+    phpenmod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
   args:
     creates: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item }}.ini"
   with_items: "{{ php_cli_ondrej_module_priorities.results }}"
