@@ -21,6 +21,13 @@ None
 * `php_cli_ondrej_disable_functions`: [default: `[]`]: This directive allows you to disable certain functions for security reasons
 * `php_cli_ondrej_max_execution_time`: [default: `0`]: Maximum execution time of each script, in seconds
 * `php_cli_ondrej_memory_limit`: [default: `-1`]: Maximum amount of memory a script may consume
+* `php_cli_ondrej_zend_assertions`: [default: `-1`]: When set to `1`, assertion code will be generated and executed (`development mode`). When set to `0`, assertion code will be generated but it will be skipped (not executed) at runtime. When set to `-1`, assertion code will not be generated, making the assertions zero-cost (`production mode`) (since `7.0`)
+* `php_cli_ondrej_assert_active`: [optional]: Enable `assert()` evaluation
+* `php_cli_ondrej_assert_exception`: [optional]: Issue an `AssertionError` exception for the failed assertion (since `7.0`)
+* `php_cli_ondrej_assert_warning`: [optional]: Issue a PHP warning for each failed assertion
+* `php_cli_ondrej_assert_bail`: [optional]: Terminate script execution on failed assertions
+* `php_cli_ondrej_assert_callback`: [optional]: User function to call on failed assertions
+* `php_cli_ondrej_assert_quiet_eval`: [optional]: Use the current setting of `error_reporting()` during assertion expression evaluation
 * `php_cli_ondrej_error_reporting`: [default: `E_ALL & ~E_DEPRECATED & ~E_STRICT`]: This directive informs PHP of which errors, warnings and notices you would like it to take action for
 * `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem (since `5.6`)
 * `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem (since `5.6`)

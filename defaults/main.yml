@@ -12,6 +12,7 @@ php_cli_ondrej_disable_functions: []
 php_cli_ondrej_max_execution_time: 0
 php_cli_ondrej_memory_limit: -1
 php_cli_ondrej_error_reporting: 'E_ALL & ~E_DEPRECATED & ~E_STRICT'
+php_cli_ondrej_zend_assertions: -1
 
 php_cli_ondrej_mods_present:
   - name: json
