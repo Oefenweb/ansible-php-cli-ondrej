@@ -1573,32 +1573,56 @@ session.sid_bits_per_character = 5
 ; Development Value: 1
 ; Production Value: -1
 ; http://php.net/zend.assertions
-zend.assertions = -1
+zend.assertions = {{ php_cli_ondrej_zend_assertions }}
 
 ; Assert(expr); active by default.
 ; http://php.net/assert.active
+{% if php_cli_ondrej_assert_active is defined %}
+assert.active = {{ php_cli_ondrej_assert_active | bool | int }}
+{% else %}
 ;assert.active = On
+{% endif %}
 
 ; Throw an AssertationException on failed assertions
 ; http://php.net/assert.exception
+{% if php_cli_ondrej_assert_exception is defined %}
+assert.exception = {{ php_cli_ondrej_assert_exception | bool | int }}
+{% else %}
 ;assert.exception = On
+{% endif %}
 
 ; Issue a PHP warning for each failed assertion. (Overridden by assert.exception if active)
 ; http://php.net/assert.warning
+{% if php_cli_ondrej_assert_warning is defined %}
+assert.warning = {{ php_cli_ondrej_assert_warning | bool | int }}
+{% else %}
 ;assert.warning = On
+{% endif %}
 
 ; Don't bail out by default.
 ; http://php.net/assert.bail
+{% if php_cli_ondrej_assert_bail is defined %}
+assert.bail = {{ php_cli_ondrej_assert_bail | bool | int }}
+{% else %}
 ;assert.bail = Off
+{% endif %}
 
 ; User-function to be called if an assertion fails.
 ; http://php.net/assert.callback
+{% if php_cli_ondrej_assert_callback is defined %}
+assert.callback = {{ php_cli_ondrej_assert_callback }}
+{% else %}
 ;assert.callback = 0
+{% endif %}
 
 ; Eval the expression with current error_reporting().  Set to true if you want
 ; error_reporting(0) around the eval().
 ; http://php.net/assert.quiet-eval
+{% if php_cli_ondrej_assert_quiet_eval is defined %}
+assert.quiet_eval = {{ php_cli_ondrej_assert_quiet_eval | bool | int }}
+{% else %}
 ;assert.quiet_eval = 0
+{% endif %}
 
 [COM]
 ; path to a file containing GUIDs, IIDs or filenames of files with TypeLibs
