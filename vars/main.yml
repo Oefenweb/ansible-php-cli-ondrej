@@ -30,6 +30,8 @@ php_cli_ondrej_mods_dependencies:
     - php-memcache
   msgpack:
     - php-msgpack
+  igbinary:
+    - php-igbinary
   mbstring:
     - "php{{ php_cli_ondrej_version }}-mbstring"
   mcrypt:
