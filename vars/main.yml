@@ -54,6 +54,10 @@ php_cli_ondrej_mods_dependencies:
     - "php{{ php_cli_ondrej_version }}-snmp"
   opcache:
     - "php{{ php_cli_ondrej_version }}-opcache"
+  ldap:
+    - "php{{ php_cli_ondrej_version }}-ldap"
+  gmp:
+    - "php{{ php_cli_ondrej_version }}-gmp"
   ast:
     - php-ast
   sqlite3:

@@ -1,6 +1,7 @@
 ## php-cli-ondrej 
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-php-cli-ondrej.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-php-cli-ondrej) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-php--56--cli-blue.svg)](https://galaxy.ansible.com/Oefenweb/php-cli-ondrej)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-php-cli-ondrej.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-php-cli-ondrej)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-php--56--cli-blue.svg)](https://galaxy.ansible.com/Oefenweb/php-cli-ondrej)
 
 Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 
@@ -20,6 +21,7 @@ None
 * `php_cli_ondrej_serialize_precision`: [default: `17`, `-1` since `7.1`]: When floats & doubles are serialized store serialize_precision significant digits after the floating point
 * `php_cli_ondrej_disable_functions`: [default: `[]`]: This directive allows you to disable certain functions for security reasons
 * `php_cli_ondrej_max_execution_time`: [default: `0`]: Maximum execution time of each script, in seconds
+* `php_cli_ondrej_date_timezone`: [optional]: The timezone used by all date/time functions
 * `php_cli_ondrej_memory_limit`: [default: `-1`]: Maximum amount of memory a script may consume
 * `php_cli_ondrej_zend_assertions`: [default: `-1`]: When set to `1`, assertion code will be generated and executed (`development mode`). When set to `0`, assertion code will be generated but it will be skipped (not executed) at runtime. When set to `-1`, assertion code will not be generated, making the assertions zero-cost (`production mode`) (since `7.0`)
 * `php_cli_ondrej_assert_active`: [optional]: Enable `assert()` evaluation
