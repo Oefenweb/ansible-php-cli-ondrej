@@ -4,7 +4,7 @@
   alternatives:
     name: php
     path: "/usr/bin/php{{ php_cli_ondrej_version }}"
-  when: php_cli_ondrej_update_alternatives
+  when: php_cli_ondrej_update_alternatives | bool
   tags:
     - php-cli-ondrej-configuration-update-alternatives
 

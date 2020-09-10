@@ -4,5 +4,6 @@
   apt_repository:
     repo: 'ppa:ondrej/php'
     update_cache: true
+    mode: 0644
   tags:
     - php-cli-ondrej-repository-add

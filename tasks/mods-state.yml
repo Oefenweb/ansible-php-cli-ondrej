@@ -5,6 +5,7 @@
     content: ''
     dest: "{{ php_cli_ondrej_mods_available_path }}/{{ item }}.ini"
     force: false
+    mode: 0644
   with_items: "{{ php_cli_ondrej_mods_present_names + php_cli_ondrej_mods_absent_names }}"
   tags:
     - php-cli-ondrej-mods-state-priorities
