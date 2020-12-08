@@ -1,4 +1,4 @@
-## php-cli-ondrej 
+## php-cli-ondrej
 
 [![Build Status](https://travis-ci.org/Oefenweb/ansible-php-cli-ondrej.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-php-cli-ondrej)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-php--56--cli-blue.svg)](https://galaxy.ansible.com/Oefenweb/php-cli-ondrej)
@@ -11,7 +11,7 @@ None
 
 #### Variables
 
-* `php_cli_ondrej_version`: [default: `7.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`)
+* `php_cli_ondrej_version`: [default: `7.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`, `7.4`)
 
 * `php_cli_ondrej_install`: [default: `[]`]: (Additional) Packages to install
 

@@ -5,12 +5,32 @@
   become: true
   roles:
     - role: ../../
-      php_cli_ondrej_version: 7.0
+      php_cli_ondrej_version: 7.4
       php_cli_ondrej_update_alternatives: false
+      php_cli_ondrej_mods_present:
+        - name: json
+        - name: xml
+        - name: readline
+        - name: mysql
+        - name: memcached
+        - name: msgpack
+        - name: mbstring
+        - name: gd
+        - name: curl
 
     - role: ../../
-      php_cli_ondrej_version: 7.1
-      php_cli_ondrej_update_alternatives: false
+      php_cli_ondrej_version: 7.3
+      php_cli_ondrej_update_alternatives: true
+      php_cli_ondrej_mods_present:
+        - name: json
+        - name: xml
+        - name: readline
+        - name: mysql
+        - name: memcached
+        - name: msgpack
+        - name: mbstring
+        - name: gd
+        - name: curl
 
     - role: ../../
       php_cli_ondrej_version: 7.2
@@ -27,18 +47,13 @@
         - name: curl
 
     - role: ../../
-      php_cli_ondrej_version: 7.3
+      php_cli_ondrej_version: 7.1
       php_cli_ondrej_update_alternatives: false
-      php_cli_ondrej_mods_present:
-        - name: json
-        - name: xml
-        - name: readline
-        - name: mysql
-        - name: memcached
-        - name: msgpack
-        - name: mbstring
-        - name: gd
-        - name: curl
 
-    - role: ../../
-      php_cli_ondrej_version: 5.6
+#    - role: ../../
+#      php_cli_ondrej_version: 7.0
+#      php_cli_ondrej_update_alternatives: false
+#
+#    - role: ../../
+#      php_cli_ondrej_version: 5.6
+#      php_cli_ondrej_update_alternatives: false
