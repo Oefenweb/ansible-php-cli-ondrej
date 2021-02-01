@@ -7,7 +7,8 @@ Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 
 #### Requirements
 
-None
+* `software-properties-common` (will be installed)
+* `dirmngr` (will be installed)
 
 #### Variables
 
