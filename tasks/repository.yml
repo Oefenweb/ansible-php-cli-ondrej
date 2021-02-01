@@ -1,5 +1,15 @@
 # tasks file for php-cli-ondrej
 ---
+- name: repository | install | dependencies (pre)
+  apt:
+    name: "{{ php_cli_ondrej_dependencies_pre }}"
+    state: "{{ apt_install_state | default('latest') }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  tags:
+    - php-cli-ondrej-repository-install
+    - php-cli-ondrej-repository-install-dependencies
+
 - name: repository | add
   apt_repository:
     repo: 'ppa:ondrej/php'

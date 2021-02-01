@@ -8,6 +8,10 @@ php_cli_ondrej_versions_supported:
   - '7.3'
   - '7.4'
 
+php_cli_ondrej_dependencies_pre:
+  - software-properties-common
+  - dirmngr
+
 php_cli_ondrej_dependencies:
   - "php{{ php_cli_ondrej_version }}-cli"
 

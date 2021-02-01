@@ -1,10 +1,9 @@
-# test file for php-cli-ondrej
 ---
-- hosts: localhost
-  connection: local
+- name: Converge
+  hosts: all
   become: true
   roles:
-    - role: ../../
+    - role: ../../../
       php_cli_ondrej_version: 7.4
       php_cli_ondrej_update_alternatives: false
       php_cli_ondrej_mods_present:
@@ -18,7 +17,7 @@
         - name: gd
         - name: curl
 
-    - role: ../../
+    - role: ../../../
       php_cli_ondrej_version: 7.3
       php_cli_ondrej_update_alternatives: true
       php_cli_ondrej_mods_present:
@@ -32,7 +31,7 @@
         - name: gd
         - name: curl
 
-    - role: ../../
+    - role: ../../../
       php_cli_ondrej_version: 7.2
       php_cli_ondrej_update_alternatives: false
       php_cli_ondrej_mods_present:
@@ -46,6 +45,6 @@
         - name: gd
         - name: curl
 
-    - role: ../../
+    - role: ../../../
       php_cli_ondrej_version: 7.1
       php_cli_ondrej_update_alternatives: false
