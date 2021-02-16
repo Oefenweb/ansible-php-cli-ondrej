@@ -19,9 +19,6 @@ php_cli_ondrej_configuration_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/ph
 php_cli_ondrej_mods_available_path: "/etc/php/{{ php_cli_ondrej_version }}/mods-available"
 php_cli_ondrej_conf_d_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/conf.d"
 
-# Some of the dependencies below (e.g. `php-memcached`) do not have a version specific version,
-# see: https://github.com/oerdnj/deb.sury.org/issues/363
-
 php_cli_ondrej_mods_dependencies:
   json:
     - "php{{ php_cli_ondrej_version }}-json"
@@ -30,13 +27,13 @@ php_cli_ondrej_mods_dependencies:
   mysql:
     - "php{{ php_cli_ondrej_version }}-mysql"
   memcached:
-    - php-memcached
+    - "php{{ php_cli_ondrej_version }}-memcached"
   memcache:
-    - php-memcache
+    - "php{{ php_cli_ondrej_version }}-memcache"
   msgpack:
-    - php-msgpack
+    - "php{{ php_cli_ondrej_version }}-msgpack"
   igbinary:
-    - php-igbinary
+    - "php{{ php_cli_ondrej_version }}-igbinary"
   mbstring:
     - "php{{ php_cli_ondrej_version }}-mbstring"
   mcrypt:
@@ -46,9 +43,9 @@ php_cli_ondrej_mods_dependencies:
   curl:
     - "php{{ php_cli_ondrej_version }}-curl"
   redis:
-    - php-redis
+    - "php{{ php_cli_ondrej_version }}-redis"
   xdebug:
-    - php-xdebug
+    - "php{{ php_cli_ondrej_version }}-xdebug"
   intl:
     - "php{{ php_cli_ondrej_version }}-intl"
   readline:
@@ -64,11 +61,13 @@ php_cli_ondrej_mods_dependencies:
   gmp:
     - "php{{ php_cli_ondrej_version }}-gmp"
   ast:
-    - php-ast
+    - "php{{ php_cli_ondrej_version }}-ast"
   sqlite3:
     - "php{{ php_cli_ondrej_version }}-sqlite3"
+  sodium: "{{ php_cli_ondrej_mods_dependencies_sodium }}"
   # TODO: This is only for backwards compatibility, remove some day
   libsodium:
     - php-libsodium
-  sodium:
-    - php-sodium
+
+php_cli_ondrej_mods_dependencies_sodium:
+  - "php{{ php_cli_ondrej_version }}-sodium"
