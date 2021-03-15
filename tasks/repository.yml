@@ -1,4 +1,4 @@
-# tasks file for php-cli-ondrej
+# tasks file
 ---
 - name: repository | install | dependencies (pre)
   apt:

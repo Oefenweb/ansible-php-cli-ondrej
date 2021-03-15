@@ -1,6 +1,7 @@
-# meta file for php-cli-ondrej
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: php-cli-ondrej
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

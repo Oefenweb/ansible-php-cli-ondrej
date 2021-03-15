@@ -1,4 +1,4 @@
-# vars file for php-cli-ondrej
+# vars file
 ---
 php_cli_ondrej_versions_supported:
   - '5.6'
