@@ -1,7 +1,7 @@
 ## php-cli-ondrej
 
 [![CI](https://github.com/Oefenweb/ansible-php-cli-ondrej/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-php-cli-ondrej/actions?query=workflow%3ACI)
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-php--56--cli-blue.svg)](https://galaxy.ansible.com/Oefenweb/php-cli-ondrej)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-php--56--cli-blue.svg)](https://galaxy.ansible.com/Oefenweb/php_cli_ondrej)
 
 Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 

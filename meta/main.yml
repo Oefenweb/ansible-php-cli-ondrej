@@ -2,7 +2,7 @@
 ---
 galaxy_info:
   namespace: oefenweb
-  role_name: php-cli-ondrej
+  role_name: php_cli_ondrej
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa)
