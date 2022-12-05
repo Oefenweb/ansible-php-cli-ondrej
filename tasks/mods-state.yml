@@ -11,11 +11,9 @@
     - php-cli-ondrej-mods-state-priorities
     - php-cli-ondrej-mods-state-priorities-touch
 
-- name: mods state | get priorities
+- name: mods state | get priorities  # noqa command-instead-of-module
   command: >
     sed -ne "s/^;[ ]\?priority=\([0-9]\+\)$/\\1/p" {{ php_cli_ondrej_mods_available_path }}/{{ item }}.ini
-  args:
-    warn: false
   register: php_cli_ondrej_module_priorities
   changed_when: false
   with_items: "{{ php_cli_ondrej_mods_present_names + php_cli_ondrej_mods_absent_names }}"
