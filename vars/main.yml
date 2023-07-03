@@ -7,6 +7,9 @@ php_cli_ondrej_versions_supported:
   - '7.2'
   - '7.3'
   - '7.4'
+  - '8.0'
+  - '8.1'
+  - '8.2'
 
 php_cli_ondrej_dependencies_pre:
   - software-properties-common

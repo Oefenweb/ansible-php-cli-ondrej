@@ -12,11 +12,11 @@ Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 
 #### Variables
 
-* `php_cli_ondrej_version`: [default: `7.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`, `7.4`)
+* `php_cli_ondrej_version`: [default: `8.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`, `7.4`, `8.0`, `8.1` and `8.2`)
 
 * `php_cli_ondrej_install`: [default: `[]`]: (Additional) Packages to install
 
-* `php_cli_ondrej_update_alternatives`: [default: `true`]: Whether or not to run `update-alternatives`
+* `php_cli_ondrej_update_alternatives`: [default: `true`]: Whether to run `update-alternatives`
 
 * `php_cli_ondrej_precision`: [default: `14`]: The number of significant digits displayed in floating point numbers
 * `php_cli_ondrej_serialize_precision`: [default: `17`, `-1` since `7.1`]: When floats & doubles are serialized store serialize_precision significant digits after the floating point
