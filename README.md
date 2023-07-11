@@ -30,7 +30,7 @@ Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 * `php_cli_ondrej_assert_warning`: [optional]: Issue a PHP warning for each failed assertion
 * `php_cli_ondrej_assert_bail`: [optional]: Terminate script execution on failed assertions
 * `php_cli_ondrej_assert_callback`: [optional]: User function to call on failed assertions
-* `php_cli_ondrej_assert_quiet_eval`: [optional]: Use the current setting of `error_reporting()` during assertion expression evaluation
+* `php_cli_ondrej_assert_quiet_eval`: [optional]: Use the current setting of `error_reporting()` during assertion expression evaluation (removed as of `8.0`)
 * `php_cli_ondrej_error_reporting`: [default: `E_ALL & ~E_DEPRECATED & ~E_STRICT`]: This directive informs PHP of which errors, warnings and notices you would like it to take action for
 * `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem (since `5.6`)
 * `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem (since `5.6`)
