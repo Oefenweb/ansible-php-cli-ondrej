@@ -23,8 +23,7 @@ php_cli_ondrej_mods_available_path: "/etc/php/{{ php_cli_ondrej_version }}/mods-
 php_cli_ondrej_conf_d_file: "/etc/php/{{ php_cli_ondrej_version }}/cli/conf.d"
 
 php_cli_ondrej_mods_dependencies:
-  json:
-    - "php{{ php_cli_ondrej_version }}-json"
+  json: "{{ php_cli_ondrej_mods_dependencies_json }}"
   xml:
     - "php{{ php_cli_ondrej_version }}-xml"
   mysql:
@@ -74,3 +73,6 @@ php_cli_ondrej_mods_dependencies:
 
 php_cli_ondrej_mods_dependencies_sodium:
   - "php{{ php_cli_ondrej_version }}-sodium"
+
+php_cli_ondrej_mods_dependencies_json:
+  - "php{{ php_cli_ondrej_version }}-json"

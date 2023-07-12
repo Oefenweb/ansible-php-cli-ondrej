@@ -21,23 +21,23 @@
     - php-cli-ondrej
     - php-cli-ondrej-install
 
-#- name: configuration
-#  import_tasks: configuration.yml
-#  tags:
-#    - configuration
-#    - php-cli-ondrej
-#    - php-cli-ondrej-configuration
-#
-#- name: mods-install
-#  import_tasks: mods-install.yml
-#  tags:
-#    - configuration
-#    - php-cli-ondrej
-#    - php-cli-ondrej-mods-install
-#
-#- name: mods-state
-#  import_tasks: mods-state.yml
-#  tags:
-#    - configuration
-#    - php-cli-ondrej
-#    - php-cli-ondrej-mods-state
+- name: configuration
+  import_tasks: configuration.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-configuration
+
+- name: mods-install
+  import_tasks: mods-install.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-mods-install
+
+- name: mods-state
+  import_tasks: mods-state.yml
+  tags:
+    - configuration
+    - php-cli-ondrej
+    - php-cli-ondrej-mods-state

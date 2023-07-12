@@ -8,6 +8,13 @@
     - php-cli-ondrej-mods-install-install
 
 - name: mods install | install
+  set_fact:
+    php_cli_ondrej_mods_dependencies_json: []
+  when: php_cli_ondrej_version is version('8.2', '>=')
+  tags:
+    - php-cli-ondrej-mods-install-install
+
+- name: mods install | install
   apt:
     name: "{{ item.dependencies | default(php_cli_ondrej_mods_dependencies[item.name]) | default([]) }}"
     state: "{{ apt_install_state | default('latest') }}"
