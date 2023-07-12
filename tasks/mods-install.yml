@@ -1,21 +1,21 @@
 # tasks file
 ---
 - name: mods install | install
-  set_fact:
+  ansible.builtin.set_fact:
     php_cli_ondrej_mods_dependencies_sodium: []
   when: php_cli_ondrej_version is version('7.1', '>')
   tags:
     - php-cli-ondrej-mods-install-install
 
 - name: mods install | install
-  set_fact:
+  ansible.builtin.set_fact:
     php_cli_ondrej_mods_dependencies_json: []
   when: php_cli_ondrej_version is version('8.2', '>=')
   tags:
     - php-cli-ondrej-mods-install-install
 
 - name: mods install | install
-  apt:
+  ansible.builtin.apt:
     name: "{{ item.dependencies | default(php_cli_ondrej_mods_dependencies[item.name]) | default([]) }}"
     state: "{{ apt_install_state | default('latest') }}"
   with_items: "{{ php_cli_ondrej_mods_present }}"

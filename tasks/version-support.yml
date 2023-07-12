@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: version support | check
-  fail:
+  ansible.builtin.fail:
     msg: "PHP version {{ php_cli_ondrej_version }} is not supported"
   when: php_cli_ondrej_version | string not in php_cli_ondrej_versions_supported
   tags:

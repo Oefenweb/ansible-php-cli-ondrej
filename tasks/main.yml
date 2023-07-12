@@ -1,42 +1,42 @@
 # tasks file
 ---
 - name: version-support
-  import_tasks: version-support.yml
+  ansible.builtin.import_tasks: version-support.yml
   tags:
     - configuration
     - php-cli-ondrej
     - php-cli-ondrej-version-support
 
 - name: repository
-  import_tasks: repository.yml
+  ansible.builtin.import_tasks: repository.yml
   tags:
     - configuration
     - php-cli-ondrej
     - php-cli-ondrej-repository
 
 - name: install
-  import_tasks: install.yml
+  ansible.builtin.import_tasks: install.yml
   tags:
     - configuration
     - php-cli-ondrej
     - php-cli-ondrej-install
 
 - name: configuration
-  import_tasks: configuration.yml
+  ansible.builtin.import_tasks: configuration.yml
   tags:
     - configuration
     - php-cli-ondrej
     - php-cli-ondrej-configuration
 
 - name: mods-install
-  import_tasks: mods-install.yml
+  ansible.builtin.import_tasks: mods-install.yml
   tags:
     - configuration
     - php-cli-ondrej
     - php-cli-ondrej-mods-install
 
 - name: mods-state
-  import_tasks: mods-state.yml
+  ansible.builtin.import_tasks: mods-state.yml
   tags:
     - configuration
     - php-cli-ondrej
