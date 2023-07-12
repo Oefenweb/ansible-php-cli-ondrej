@@ -1,6 +1,6 @@
 # defaults file
 ---
-php_cli_ondrej_version: 7.1
+php_cli_ondrej_version: 8.1
 
 php_cli_ondrej_install: []
 

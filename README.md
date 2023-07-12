@@ -12,11 +12,11 @@ Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 
 #### Variables
 
-* `php_cli_ondrej_version`: [default: `7.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`, `7.4`)
+* `php_cli_ondrej_version`: [default: `8.1`]: Version to install (e.g. `7.0`, `7.1`, `7.2`, `7.3`, `7.4`, `8.0`, `8.1` and `8.2`)
 
 * `php_cli_ondrej_install`: [default: `[]`]: (Additional) Packages to install
 
-* `php_cli_ondrej_update_alternatives`: [default: `true`]: Whether or not to run `update-alternatives`
+* `php_cli_ondrej_update_alternatives`: [default: `true`]: Whether to run `update-alternatives`
 
 * `php_cli_ondrej_precision`: [default: `14`]: The number of significant digits displayed in floating point numbers
 * `php_cli_ondrej_serialize_precision`: [default: `17`, `-1` since `7.1`]: When floats & doubles are serialized store serialize_precision significant digits after the floating point
@@ -30,7 +30,7 @@ Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 * `php_cli_ondrej_assert_warning`: [optional]: Issue a PHP warning for each failed assertion
 * `php_cli_ondrej_assert_bail`: [optional]: Terminate script execution on failed assertions
 * `php_cli_ondrej_assert_callback`: [optional]: User function to call on failed assertions
-* `php_cli_ondrej_assert_quiet_eval`: [optional]: Use the current setting of `error_reporting()` during assertion expression evaluation
+* `php_cli_ondrej_assert_quiet_eval`: [optional]: Use the current setting of `error_reporting()` during assertion expression evaluation (removed as of `8.0`)
 * `php_cli_ondrej_error_reporting`: [default: `E_ALL & ~E_DEPRECATED & ~E_STRICT`]: This directive informs PHP of which errors, warnings and notices you would like it to take action for
 * `php_cli_ondrej_openssl_cafile`: [optional]: The location of a Certificate Authority (CA) file on the local filesystem (since `5.6`)
 * `php_cli_ondrej_openssl_capath`: [optional]: The location of a Certificate Authority (CA) directory on the local filesystem (since `5.6`)

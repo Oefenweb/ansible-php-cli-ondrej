@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: mods state | touch priorities
-  copy:
+  ansible.builtin.copy:
     content: ''
     dest: "{{ php_cli_ondrej_mods_available_path }}/{{ item }}.ini"
     force: false
@@ -12,7 +12,7 @@
     - php-cli-ondrej-mods-state-priorities-touch
 
 - name: mods state | get priorities  # noqa command-instead-of-module
-  command: >
+  ansible.builtin.command: >
     sed -ne "s/^;[ ]\?priority=\([0-9]\+\)$/\\1/p" {{ php_cli_ondrej_mods_available_path }}/{{ item }}.ini
   register: php_cli_ondrej_module_priorities
   changed_when: false
@@ -22,7 +22,7 @@
     - php-cli-ondrej-mods-state-priorities-get
 
 - name: mods state | disable
-  command: >
+  ansible.builtin.command: >
     phpdismod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
   args:
     removes: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item }}.ini"
@@ -32,7 +32,7 @@
     - php-cli-ondrej-mods-state-disable
 
 - name: mods state | enable
-  command: >
+  ansible.builtin.command: >
     phpenmod -v {{ php_cli_ondrej_version }} -s cli {{ item.item }}
   args:
     creates: "{{ php_cli_ondrej_conf_d_file }}/{{ item.stdout | default(20, true) }}-{{ item.item }}.ini"

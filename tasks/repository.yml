@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: repository | install | dependencies (pre)
-  apt:
+  ansible.builtin.apt:
     name: "{{ php_cli_ondrej_dependencies_pre }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -11,7 +11,7 @@
     - php-cli-ondrej-repository-install-dependencies
 
 - name: repository | add
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: 'ppa:ondrej/php'
     update_cache: true
     mode: 0644

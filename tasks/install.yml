@@ -1,14 +1,14 @@
 # tasks file
 ---
 - name: install | dependencies
-  apt:
+  ansible.builtin.apt:
     name: "{{ php_cli_ondrej_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
   tags:
     - php-cli-ondrej-install-dependencies
 
 - name: install | additional
-  apt:
+  ansible.builtin.apt:
     name: "{{ php_cli_ondrej_install }}"
     state: "{{ apt_install_state | default('latest') }}"
   tags:
