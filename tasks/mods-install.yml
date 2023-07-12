@@ -10,7 +10,7 @@
 - name: mods install | install
   ansible.builtin.set_fact:
     php_cli_ondrej_mods_dependencies_json: []
-  when: php_cli_ondrej_version is version('8.2', '>=')
+  when: php_cli_ondrej_version is version('8.0', '>=')
   tags:
     - php-cli-ondrej-mods-install-install
 
