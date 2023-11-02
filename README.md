@@ -55,7 +55,7 @@ None
 ---
 - hosts: all
   roles:
-    - php-cli-ondrej
+    - oefenweb.php-cli-ondrej
 ```
 
 ##### Multiple versions
@@ -64,11 +64,11 @@ None
 ---
 - hosts: all
   roles:
-    - role: php-cli-ondrej
+    - role: oefenweb.php-cli-ondrej
       php_cli_ondrej_version: 7.0
       php_cli_ondrej_update_alternatives: false
 
-    - role: php-cli-ondrej
+    - role: oefenweb.php-cli-ondrej
       php_cli_ondrej_version: 5.6
 ```
 
