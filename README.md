@@ -9,6 +9,7 @@ Set up PHP Cli in Ubuntu systems (using Ondřej Surý's ppa).
 
 * `software-properties-common` (will be installed)
 * `dirmngr` (will be installed)
+* `apt-transport-https` (will be installed)
 
 #### Variables
 
