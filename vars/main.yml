@@ -11,9 +11,20 @@ php_cli_ondrej_versions_supported:
   - '8.1'
   - '8.2'
 
+php_cli_ondrej_keyring_id: B8DC7E53946656EFBCE4C1DD71DAEAAB4AD4CAB6
+php_cli_ondrej_keyring_dst: /usr/share/keyrings/php-ondrej.gpg
+php_cli_ondrej_repositories:
+  - type: "deb [signed-by={{ php_cli_ondrej_keyring_dst }}]"
+    url: "https://ppa.launchpadcontent.net/ondrej/php/{{ ansible_distribution | lower }} {{ ansible_distribution_release }}"
+    component: main
+php_cli_ondrej_repository_files_absent:
+  - "/etc/apt/sources.list.d/ppa_ondrej_php_{{ ansible_distribution_release }}.list"
+  - "/etc/apt/sources.list.d/ppa_ondrej_php_{{ ansible_distribution_release }}.list.save"
+
 php_cli_ondrej_dependencies_pre:
   - software-properties-common
   - dirmngr
+  - apt-transport-https
 
 php_cli_ondrej_dependencies:
   - "php{{ php_cli_ondrej_version }}-cli"
