@@ -1,2 +1,3 @@
 ---
-collections: []
+collections:
+  - name: community.general

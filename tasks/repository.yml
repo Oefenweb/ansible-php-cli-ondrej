@@ -15,7 +15,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0755
+    mode: '0755'
   tags:
     - php-cli-ondrej-repository-keyrings-directory-create
 
@@ -41,7 +41,7 @@
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: "{{ item.state | default('present') }}"
     update_cache: true
-    mode: 0644
+    mode: '0644'
   with_items: "{{ php_cli_ondrej_repositories }}"
   tags:
     - php-cli-ondrej-repository-add
