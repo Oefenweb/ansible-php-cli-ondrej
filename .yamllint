@@ -2,9 +2,6 @@
 extends: default
 
 rules:
-  comments:
-    min-spaces-from-content: 2
-  comments-indentation: false
   braces:
     max-spaces-inside: 1
     level: error
@@ -13,9 +10,6 @@ rules:
     level: error
   line-length: disable
   truthy: disable
-  octal-values:
-    forbid-implicit-octal: true
-    forbid-explicit-octal: true
 
 ignore: |
   .tox/
